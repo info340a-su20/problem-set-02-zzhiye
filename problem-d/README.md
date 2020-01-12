@@ -11,7 +11,7 @@ Instructions for achieving this appearance are detailed below. Note that you wil
 **A note on testing**: while there are multiple approaches to achieving the desired effect, the unit tests are written to check for a particular (usually "best practice") implementation. This limitation is due to the need for automated testing, rather than any fault in other approaches.
 
 
-1. The first thing you should do is set your page's [`box-sizing`](https://info343.github.io/css-layouts.html#box-sizing) to be `border-box`. This will help with calculating measurements of the rest of the changes.
+1. The first thing you should do is set your page's [`box-sizing`](https://info340.github.io/css-layouts.html#box-sizing) to be `border-box`. This will help with calculating measurements of the rest of the changes.
 
 2. Add rules to give the page's content appropriate colors, fonts, and sizes:
 
