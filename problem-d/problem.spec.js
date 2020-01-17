@@ -29,7 +29,8 @@ describe('Source code is valid', () => {
       'indent-width':false, //don't need to beautify
       'line-no-trailing-whitespace': false, //don't need to beautify
       'id-class-style':false, //I like dashes in classnames
-      'img-req-alt':true
+      'img-req-alt':true,
+      'spec-char-escape':false //disable for Google Font urls
     }
 
     await expect(htmlPath).toHaveNoHtmlLintErrorsAsync(lintOpts);
@@ -132,7 +133,7 @@ describe('Includes required CSS rules', () => {
 
     let searchButton = $('.searchBox').children('button');
     expect(searchButton.children().length).toEqual(1); //button contains one element
-    expect(searchButton.children('.fa').length).toEqual(1); //button's content is Font Awesome icon
+    expect(searchButton.children('.fa, .fas').length).toEqual(1); //button's content is Font Awesome icon
     expect(searchButton.text()).not.toMatch(/Search/); //button doesn't show word "Search"
 
     expect(searchButton.css('height')).toEqual('2.5rem');
@@ -149,7 +150,7 @@ describe('Includes required CSS rules', () => {
     expect(hoverRules[0].selectors.join().includes(':active')); //hover rule also applies to active
     expect(hoverRules[0].selectors.join().includes(':focus')); //hover rule also applies to focus
 
-    let hoverRuleDeclarations = hoverRules[0].declarations.filter((d) => d.type === 'declaration')
+    let hoverRuleDeclarations = hoverRules[0].declarations.filter((d) => d.type === 'declaration') //ignore comments
 
     let colorDeclaration = hoverRuleDeclarations.filter((d) => d.property === 'color');
     expect(colorDeclaration[0].value.toLowerCase()).toEqual('#b7a57a'); //color changes on hover

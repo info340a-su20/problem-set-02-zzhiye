@@ -51,7 +51,7 @@ Instructions for achieving this appearance are detailed below. Note that you wil
 
     - The `input` box should have a height of `2.5rem`, a `font-size` of `1rem`, `.5rem` of space between the text and (all of) the box edges, and be [`bottom` aligned](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align) (to line up with the button).
 
-7. The search button should show a magnifying glass icon instead of the word "Search". You should replace the text with a [Font Awesome icon](https://fontawesome.com/icons?from=io).
+7. The search button should show a magnifying glass icon instead of the word "Search". You should replace the text with a [Font Awesome icon](https://fontawesome.com/icons/search?style=solid).
 
     - You will need to include the Font Awesome library (via CDN) in your `index.html` file. You can find the CDN link [here](https://cdnjs.com/libraries/font-awesome) 
 
