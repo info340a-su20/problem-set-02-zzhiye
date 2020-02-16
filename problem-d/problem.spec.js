@@ -140,7 +140,7 @@ describe('Includes required CSS rules', () => {
     expect(searchButton.css('font-size')).toEqual('1.5rem');
     expect(searchButton.css('padding')).toEqual('.3rem');
 
-    let icon = searchButton.children('.fa');
+    let icon = searchButton.children('.fa, .fas');
     expect(icon.attr('aria-label').toLowerCase()).toMatch(/search/); //has aria label with "search"
   })
 
