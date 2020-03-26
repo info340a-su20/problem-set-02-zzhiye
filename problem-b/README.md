@@ -1,4 +1,4 @@
-# Problem B
+# Problem: Cut-Out Art
 
 In this exercise, you'll practice writing CSS rules and using different selectors to style specific elements.
 

@@ -1,4 +1,4 @@
-# Problem D
+# Problem: CSS Navbar
 
 In this exercise, you'll practice working with CSS properties and layouts.
 

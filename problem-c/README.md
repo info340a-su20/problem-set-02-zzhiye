@@ -1,4 +1,4 @@
-# Problem C
+# Problem: Tables
 
 In this exercise, you will practice writing HTML and CSS to create and style a _table_. For more information about tables, see [HTML table basics](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics) and [CSS Tables](https://www.w3schools.com/css/css_table.asp).
 
