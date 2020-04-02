@@ -30,6 +30,7 @@ describe('Source code is valid', () => {
       'class-style':'none', //I like dashes in classnames
       'img-req-alt':true,
       'link-req-noopener':false,
+      'spec-char-escape':false //for params in link urls
     }
 
     await expect(htmlPath).toHaveNoHtmlLintErrorsAsync(lintOpts);
@@ -193,7 +194,10 @@ describe('Table row styling', () => {
   test('highlights rows on hover', () => {
     let hoverRules = cssRules.filter((r) => r.selectors.join().match(/tbody.*:hover/));
     expect(hoverRules).toHaveLength(1); //should have one hover rule
-    expect(hoverRules[0].declarations[0].property).toEqual('background-color'); //has 'background-color' as property
-    expect(hoverRules[0].declarations[0].value.toLowerCase()).toEqual('pink'); //has correct value
+
+    let hoverRuleDeclarations = hoverRules[0].declarations.filter((d) => d.type === 'declaration') //ignore comments
+    
+    expect(hoverRuleDeclarations[0].property).toEqual('background-color'); //has 'background-color' as property
+    expect(hoverRuleDeclarations[0].value.toLowerCase()).toEqual('pink'); //has correct value
   })
 })
