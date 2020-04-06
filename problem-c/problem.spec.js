@@ -192,7 +192,7 @@ describe('Table row styling', () => {
   })
 
   test('highlights rows on hover', () => {
-    let hoverRules = cssRules.filter((r) => r.selectors.join().match(/tbody.*:hover/));
+    let hoverRules = cssRules.filter((r) => r.selectors.join().match(/tbody.*tr.*:hover/));
     expect(hoverRules).toHaveLength(1); //should have one hover rule
 
     let hoverRuleDeclarations = hoverRules[0].declarations.filter((d) => d.type === 'declaration') //ignore comments
