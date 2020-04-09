@@ -168,7 +168,7 @@ describe('Table cell styling', () => {
     let allCells = $('th, td');
     allCells.each((i, el) => {
       let cell = $(el);
-      expect(cell.css('padding')).toEqual('5px');
+      expect(cell.css('padding')).toEqual('.5em');
       expect(cell.css('border-bottom')).toEqual('1px solid #d3d3d3');
     })
   })
